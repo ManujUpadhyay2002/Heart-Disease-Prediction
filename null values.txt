@@ -1,0 +1,20 @@
+1. education:
+    - this column is not that much correleted with target so we will replace 'nan' with randomly '1' or '2'.
+
+2. cigsPerDay:
+    - this column has only 29 'nan' and there is almost 2144 values of '0' so we will replace with 0.
+
+3. heartRate:
+    - there is only 1 'nan' value so we can easily replace with mean value.
+
+4. heartRate:
+    - there are less 'nan' value so we can easily replace with mean,median,mode[22,23,25] values.
+
+5. BPMeds:
+    - if use describe for both 'Yes' & 'No' condition and try to compare with nan values than we find nan values majorly match with 'No' so we will replace with 'No'.
+
+6. totChol:
+    - fill with mean,median & mode values.
+
+7. glucose:
+    - fill with mean,median & mode values.

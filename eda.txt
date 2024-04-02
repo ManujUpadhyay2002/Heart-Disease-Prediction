@@ -1,0 +1,108 @@
+-> Data Clening Conclusion: 
+
+    - There are 0 duplicate values.
+    - change 'education' column dtype to 'int' and there is also some other columns to change to 'int'.
+    - There are some null values in col. index = [2,4,5,9,12,13,14]    
+    - Columns : 
+        education          2.241888 %
+        cigsPerDay         0.766962 %
+        BPMeds             1.150442 %
+        totChol            1.297935 %
+        BMI                0.501475 %
+        heartRate          0.029499 %
+        glucose            9.734513 %
+
+-> Categorical Features:
+
+    1. TenYearCHD:
+        - Data is biased towards 'no' 
+        - 84% 'no' & 16% 'yes'
+
+    2. gender:
+        - male has more 7% chance w.r.t female of having disease
+        - we use 'one hot encoding' beacuse there is almost same probability for male and female. 
+
+    3. currentSmoker: 
+        - As per Data this column is not that much relevant beacuse there is 1% more chance that person is smoker & has disease
+        - we can drop it.
+
+    4. BPMeds:
+        - data is highly biased towards person has not Blood Pressure.
+        - probability of having disease is more than double when person has Blood Pressure.
+        - so, if person has Blood Pressure than person has 33.06% chances that he/she has disease. 
+        - here we use 'ordinal encoding' beacuse if person has Blood Pressure than he has high chances w.r.t person has not.
+    
+    5. prevalentStroke:
+        - data is highly biased towards person has not Prevalent Stroke.
+        - probability of having disease is more than triple when person has Prevalent Stroke.
+        - so, if person has Prevalent Stroke than person has 44% chances that he/she has disease. 
+        - here we use 'ordinal encoding' beacuse if person has Prevalent Stroke than he has high chances w.r.t person has not.
+    
+    6. prevalentHyp:
+        - data is biased towards 'no'.
+        - probability of having disease is more than double when person has Prevalent Hypertension.
+        - here we use 'ordinal encoding' beacuse if person has Prevalent Hypertension than he has high chances w.r.t person has not.
+    
+    7. diabetes:
+        - data is highly biased towards person has not Diabetes.
+        - probability of having disease is more than double when person has Diabetes.
+        - so, if person has Diabetes than person has 36.70% chances that he/she has disease. 
+        - here we use 'ordinal encoding' beacuse if person has Diabetes than he has high chances 
+        w.r.t person has not.
+    
+-> Continues Features:
+
+    1. age:
+        - here categorise data into two parts age '< 47' & '>= 47'.
+        - after categorise data is biased.
+        - now if age is greater than 47 than there is almost triple probability of having disease.
+        - so we can use ordinal encoding for that. 
+    
+    2. education:
+        - we use 'one hot encoding' beacuse there is almost same probability for all categorise.
+    
+    3. totChol:
+        - there is 65 rows of outliers 
+        - range : values>345(61) & values<125(4)
+        - this outlier data is 1.53% of all over data.
+        - we have to deal with it.
+        - proof for outlier range : The disease, known as familial      
+                                    hypercholesterolemia, affects about 1 
+                                    in 500 people and can cause total cholesterol levels from 300 mg/dL to 600 mg/dL, as well as heart attacks early in life.
+        - link: http://edition.cnn.com/2009/HEALTH/11/24/moh.healthmag.cholesterol.surprises/index.html#:~:text=High%20cholesterol%20inevitable%20for%20some&text=The%20disease%2C%20known%20as%20familial,heart%20attacks%20early%20in%20life.
+
+    4. sysBP:
+        - there is 150 rows of outliers 
+        - range : values>181(150)
+        - this outlier data is 3.54% of all over data.
+        - we have to deal with it.
+
+    5. diaBP:
+        - there is 81 rows of outliers 
+        - range : values>112(76) & values<53(5)
+        - this outlier data is 1.91% of all over data.
+        - we have to deal with it.
+    
+    6. BMI:
+        - there is 98 rows of outliers 
+        - range : values>35.5(96) & values<16(2)
+        - this outlier data is 2.31% of all over data.
+        - we have to deal with it.
+
+    7. heartRate:
+        - there is 76 rows of outliers 
+        - range : values>105(73) & values<46(3)
+        - this outlier data is 1.8% of all over data.
+        - we have to deal with it.
+
+    8. glucose:
+        - there is 188 rows of outliers 
+        - range : values>111(179) & values<46(9)
+        - this outlier data is 4.44% of all over data.
+        - we have to deal with it.
+    
+    9. cigsPerDay:
+        - there is 12 rows of outliers 
+        - range : values>50(12)
+        - this outlier data is 0.3% of all over data.
+        - we have to deal with it.

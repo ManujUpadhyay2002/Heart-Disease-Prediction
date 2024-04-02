@@ -1,0 +1,8 @@
+1. 3844 index has 5 columns outlier values that's why we can remove it.
+2. 833 index has 5 columns outlier values that's why we can remove it.
+
+--> There are two options:
+    1. scaling data
+        --> 0.85
+    2. remove all outliers
+        --> 
